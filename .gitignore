@@ -1,0 +1,25 @@
+# Dataset
+data/
+*.csv
+*.tif
+*.tiff
+*.png
+*.jpg
+*.jpeg
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+venv/
+
+# Temporary files
+.DS_Store

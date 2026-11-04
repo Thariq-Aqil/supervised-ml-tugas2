@@ -79,3 +79,34 @@ The ensemble combines transformer-based and CNN-based architectures to leverage 
 
 Supervised Machine Learning - Task 2  
 Individual Assignment
+
+## How to Run
+
+This project was developed using Kaggle Notebooks.
+
+1. Open the notebook: `asdos-sml-tugas2-v2.ipynb`.
+2. Add the required dataset to the Kaggle Notebook.
+3. Set the notebook environment to use a GPU.
+4. Install the dependencies listed in `requirements.txt` if needed.
+5. Run the notebook cells in order.
+6. The final prediction file is generated as `bismillah.csv`.
+
+## Repository Structure
+
+```text
+supervised-ml-tugas2/
+├── asdos-sml-tugas2-v2.ipynb
+├── src/
+│   ├── config.py
+│   ├── preprocessing.py
+│   ├── dataset.py
+│   ├── dit_model.py
+│   ├── convnext_model.py
+│   ├── ensemble.py
+│   ├── evaluation.py
+│   └── README.md
+├── reports/
+│   └── results.md
+├── requirements.txt
+├── .gitignore
+└── README.md

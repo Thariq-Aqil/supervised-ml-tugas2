@@ -29,12 +29,12 @@ The ensemble weight is selected based on validation accuracy by testing differen
 
 ## Interpretation
 
-The final ensemble combines the prediction probabilities of a transformer-based model and a CNN-based model.
+The final ensemble combines the prediction probabilities of a transformer-based model and a CNN-based model. The models provide two different architecture families, and validation accuracy is used to choose how much each model contributes to the blended probabilities.
 
-The ensemble weight is selected using validation accuracy, allowing the contribution of each model to be adjusted based on its performance on the validation set.
+The Kaggle public score of **0.89418** is the observed score on the public leaderboard subset. It should not be treated as the private leaderboard score or as a guarantee of generalization. The repository does not currently record per-model validation metrics or the selected ensemble weight, so no claim about which model contributed more is made here.
 
 The final predictions are generated for the test dataset and exported to `bismillah.csv` for submission to Kaggle.
 
-## Notes
+## Validation details to record
 
-Detailed validation accuracy for each individual model and the selected ensemble weight should be recorded from the notebook output.
+After a run, record the DiT validation accuracy, ConvNeXt validation accuracy, selected DiT ensemble weight, and ensemble validation accuracy from the notebook output. This makes the model comparison and interpretation reproducible without inventing values that are not currently captured in the report.

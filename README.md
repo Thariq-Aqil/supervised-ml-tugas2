@@ -43,15 +43,15 @@ The prediction probabilities from both models are combined using weighted averag
 
 ## Dataset
 
-The dataset is not included in this repository because it is provided through Kaggle and may be large.
+The dataset is not included in this repository. Obtain it from the Kaggle competition or the course-provided source; do not commit the dataset or generated checkpoints.
 
 To use the dataset:
 
-1. Download or access the dataset from the official Kaggle competition or course-provided source.
-2. Open the notebook in Kaggle.
-3. Add the dataset through the **Add Input** option.
-4. Ensure the dataset includes the required metadata files (`train.csv` and `test.csv`) and image files.
-5. Confirm that the notebook can access the dataset before running the cells.
+1. Download or accept the dataset from the competition/course source available to you.
+2. Open `asdos-sml-tugas2-v2.ipynb` in Kaggle and choose **Add Input** to attach the dataset.
+3. Confirm that the attached dataset contains `train.csv`, `test.csv`, and the image files referenced by the `filename` column.
+4. The notebook searches under `/kaggle/input` for `train.csv`; the image paths in both CSV files must resolve beneath that dataset directory.
+5. Keep the dataset outside the Git repository. The `.gitignore` excludes `data/`, common dataset image formats, CSV files, and checkpoint files.
 
 ## Repository Structure
 
@@ -104,7 +104,7 @@ This project was developed using Kaggle Notebooks.
 
 The final ensemble submission achieved a Kaggle public score of **0.89418**.
 
-The ensemble combines transformer-based and CNN-based architectures to leverage their different feature representations. The ensemble weight is selected based on validation accuracy. The public score reflects performance on the public evaluation subset; the private leaderboard score may differ.
+The ensemble combines a transformer-based model and a CNN-based model. The weight is selected using accuracy on the held-out validation split, then the blended probabilities produce `bismillah.csv`. The reported public score is from the public leaderboard subset; it does not establish the private leaderboard result. Record the selected weight and validation metrics from the notebook output in [`reports/results.md`](reports/results.md) when available.
 
 Further experiment details and interpretation are available in [`reports/results.md`](reports/results.md).
 
